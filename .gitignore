@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/Deadfile.Eyeglass/v14/.suo
+/Deadfile.Eyeglass/bin/x64/Debug
+/Deadfile.Eyeglass.Test/bin/x64/Debug
+/Deadfile.Eyeglass.Test/obj/x64/Debug/intermediatexaml
+/Deadfile.Eyeglass/obj/x64/Debug
+/Deadfile.Eyeglass.Test/obj/x64/Debug/Deadfile.Eyeglass.Test.xr.xml
+/Deadfile.Eyeglass.Test/obj/x64/Debug/embed.resfiles
+/Deadfile.Eyeglass.Test/obj/x64/Debug/embed.resfiles.intermediate

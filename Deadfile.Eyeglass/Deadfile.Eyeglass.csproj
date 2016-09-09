@@ -84,7 +84,7 @@
     <Compile Include="ViewModels\DeadfileViewModelBase.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="ViewModels\DeadfileUndoableViewModelBas.cs" />
+    <Compile Include="ViewModels\DeadfileUndoableViewModelBase.cs" />
     <Compile Include="Views\ClientsPage.xaml.cs">
       <DependentUpon>ClientsPage.xaml</DependentUpon>
     </Compile>
