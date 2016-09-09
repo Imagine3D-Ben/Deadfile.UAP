@@ -20,7 +20,7 @@ namespace Deadfile.Eyeglass.ViewModels
         readonly IEventAggregator eventAggregator;
         readonly IDeadfileRepository deadfileRepository;
 
-        public ClientsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator, IDeadfileRepository deadfileRepository) : base(navigationService)
+        public ClientsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator, IDeadfileRepository deadfileRepository) : base(navigationService, eventAggregator)
         {
             this.eventAggregator = eventAggregator;
             this.deadfileRepository = deadfileRepository;
@@ -28,11 +28,10 @@ namespace Deadfile.Eyeglass.ViewModels
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
-            eventAggregator.GetEvent<PaneContextChangedEvent>().Publish(this);
             base.OnNavigatedTo(e, viewModelState);
         }
 
-        public bool CanGoBack
+        public override bool CanGoBack
         {
             get
             {
@@ -40,12 +39,12 @@ namespace Deadfile.Eyeglass.ViewModels
             }
         }
 
-        public void GoBack()
+        public override void GoBack()
         {
             navigationService.GoBack();
         }
 
-        public bool HasChanges
+        public override bool HasChanges
         {
             get
             {
@@ -77,7 +76,7 @@ namespace Deadfile.Eyeglass.ViewModels
             }
         }
 
-        public void DiscardChanges()
+        public override void DiscardChanges()
         {
             throw new NotImplementedException();
         }

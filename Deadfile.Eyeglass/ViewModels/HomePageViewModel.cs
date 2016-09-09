@@ -15,7 +15,7 @@ namespace Deadfile.Eyeglass.ViewModels
     public class HomePageViewModel : DeadfileViewModelBase, IHomePageViewModel
     {
         readonly IEventAggregator eventAggregator;
-        public HomePageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
         {
             this.eventAggregator = eventAggregator;
         }
@@ -26,7 +26,7 @@ namespace Deadfile.Eyeglass.ViewModels
             base.OnNavigatedTo(e, viewModelState);
         }
 
-        public bool CanGoBack
+        public override bool CanGoBack
         {
             get
             {
@@ -34,12 +34,12 @@ namespace Deadfile.Eyeglass.ViewModels
             }
         }
 
-        public void GoBack()
+        public override void GoBack()
         {
             navigationService.GoBack();
         }
 
-        public bool HasChanges
+        public override bool HasChanges
         {
             get
             {
@@ -55,7 +55,7 @@ namespace Deadfile.Eyeglass.ViewModels
             }
         }
 
-        public void DiscardChanges()
+        public override void DiscardChanges()
         {
             throw new NotImplementedException();
         }

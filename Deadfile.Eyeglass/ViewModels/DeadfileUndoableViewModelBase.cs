@@ -9,6 +9,7 @@ using System.Text;
 using System.Reflection;
 using System.Threading.Tasks;
 using Deadfile.Eyeglass.Undoable;
+using Prism.Events;
 
 namespace Deadfile.Eyeglass.ViewModels
 {
@@ -16,7 +17,7 @@ namespace Deadfile.Eyeglass.ViewModels
     {
         private T value = new T();
 
-        public DeadfileUndoableViewModelBase(INavigationService navigationService) : base(navigationService)
+        public DeadfileUndoableViewModelBase(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
         {
             value.UndoablePropertyChanged += UndoablePropertyChanged;
         }
@@ -57,6 +58,22 @@ namespace Deadfile.Eyeglass.ViewModels
 
         public T UnderEdit { get { return value; } }
 
+        public override bool HasChanges
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override bool CanGoBack
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public bool CanUndo()
         {
             return undo.Count > 0;
@@ -83,6 +100,16 @@ namespace Deadfile.Eyeglass.ViewModels
             u.Redo();
             undo.Push(u);
             suspendChangeTracking = false;
+        }
+
+        public override void DiscardChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void GoBack()
+        {
+            throw new NotImplementedException();
         }
     }
 }
