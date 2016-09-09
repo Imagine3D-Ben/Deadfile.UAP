@@ -1,0 +1,42 @@
+﻿<local:NavigationAwarePage
+    x:Class="Deadfile.Eyeglass.Views.Shell"
+    xmlns:prism="using:Prism.Windows.Mvvm"
+    xmlns:local="using:Deadfile.Eyeglass.Views"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    xmlns:designtime="using:Deadfile.Eyeglass.DesignTime"
+    mc:Ignorable="d">
+    <d:Page.DataContext>
+        <designtime:ShellViewModel />
+    </d:Page.DataContext>
+    <SplitView DisplayMode="CompactOverlay"  IsPaneOpen="{Binding IsPaneOpen, Mode=TwoWay}"
+               OpenPaneLength="128">
+        <SplitView.Pane >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Button FontFamily="Segoe MDL2 Assets" Content="" Command="{Binding SplitViewCommand}"
+                     Width="48" Height="48" Background="Transparent" BorderThickness="0"/>
+
+                <RadioButton Content="Home" Grid.Row="1" Style="{StaticResource SplitViewRadioButtonStyle}"  FontSize="13"  GroupName="Navigation" Command="{Binding HomePageCommand}" >
+                    <RadioButton.Tag>
+                        <SymbolIcon Symbol="Home" Width="48" Height="48" />
+                    </RadioButton.Tag>
+                </RadioButton>
+
+                <RadioButton Content="Clients" Grid.Row="2" Style="{StaticResource SplitViewRadioButtonStyle}"  FontSize="13"  GroupName="Navigation" Command="{Binding ClientsPageCommand}" >
+                    <RadioButton.Tag>
+                        <SymbolIcon Symbol="People" Width="48" Height="48" />
+                    </RadioButton.Tag>
+                </RadioButton>
+            </Grid>
+        </SplitView.Pane>
+    </SplitView>
+</local:NavigationAwarePage >

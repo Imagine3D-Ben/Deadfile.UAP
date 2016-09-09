@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadfile.Eyeglass", "Deadfile.Eyeglass\Deadfile.Eyeglass.csproj", "{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadfile.Eyeglass.Test", "Deadfile.Eyeglass.Test\Deadfile.Eyeglass.Test.csproj", "{47C5B31B-1F74-45C8-B94B-1C158B89446F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Debug|x64.ActiveCfg = Debug|x64
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Debug|x64.Build.0 = Debug|x64
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Debug|x64.Deploy.0 = Debug|x64
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Release|x64.ActiveCfg = Release|x64
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Release|x64.Build.0 = Release|x64
+		{D032C88E-2F72-4BB4-BBFC-2F86EF62A71E}.Release|x64.Deploy.0 = Release|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Debug|x64.ActiveCfg = Debug|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Debug|x64.Build.0 = Debug|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Debug|x64.Deploy.0 = Debug|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Release|x64.ActiveCfg = Release|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Release|x64.Build.0 = Release|x64
+		{47C5B31B-1F74-45C8-B94B-1C158B89446F}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
