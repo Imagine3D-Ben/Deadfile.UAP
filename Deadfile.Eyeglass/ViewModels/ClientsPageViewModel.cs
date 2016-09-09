@@ -18,10 +18,12 @@ namespace Deadfile.Eyeglass.ViewModels
     public class ClientsPageViewModel : DeadfileViewModelBase, IClientsPageViewModel
     {
         readonly IEventAggregator eventAggregator;
+        readonly IDeadfileRepository deadfileRepository;
 
-        public ClientsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService)
+        public ClientsPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator, IDeadfileRepository deadfileRepository) : base(navigationService)
         {
             this.eventAggregator = eventAggregator;
+            this.deadfileRepository = deadfileRepository;
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
